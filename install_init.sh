@@ -67,7 +67,7 @@ yum -y --nogpgcheck install bind-utils traceroute telnet finger wget autoconf
 yum -y --nogpgcheck install automake libtool make gcc tree net-tools perl 
 yum -y --nogpgcheck install kernel-headers kernel-devel nano iperf3 iptraf-ng 
 yum -y --nogpgcheck install dstat ntpdate nfs-utils samba-client cifs-utils 
-yum -y --nogpgcheck install iftop htop 
+yum -y --nogpgcheck install iftop htop vim python-pip python-dev
 if [ $? -ne 0 ]
 then
 	echo -e "\nInstalacion fallida at \"Instalacion de paquetes...\"\n."
