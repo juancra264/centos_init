@@ -67,7 +67,9 @@ yum -y --nogpgcheck install bind-utils traceroute telnet finger wget autoconf
 yum -y --nogpgcheck install automake libtool make gcc tree net-tools perl 
 yum -y --nogpgcheck install kernel-headers kernel-devel nano iperf3 iptraf-ng 
 yum -y --nogpgcheck install dstat ntpdate nfs-utils samba-client cifs-utils 
-yum -y --nogpgcheck install iftop htop vim python-pip python-dev
+yum -y --nogpgcheck install iftop htop python-pip python-dev
+yum -y --nogpgcheck install tmux vim-enhanced
+
 if [ $? -ne 0 ]
 then
 	echo -e "\nInstalacion fallida at \"Instalacion de paquetes...\"\n."
@@ -103,6 +105,9 @@ echo -e "**********************************************************"
 echo -e " Sincronizacion de relojes con horalegal colombia ..."
 echo -e "**********************************************************"
 ntpdate -u horalegal.inm.gov.co
+systemctl start ntpdate
+systemctl enable ntpdate
+hwclock --systohc
 #
 # complete
 #
