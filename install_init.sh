@@ -67,8 +67,8 @@ yum -y --nogpgcheck install bind-utils traceroute telnet finger wget autoconf
 yum -y --nogpgcheck install automake libtool make gcc tree net-tools perl 
 yum -y --nogpgcheck install kernel-headers kernel-devel nano iperf3 iptraf-ng 
 yum -y --nogpgcheck install dstat ntpdate nfs-utils samba-client cifs-utils 
-yum -y --nogpgcheck install iftop htop python-pip python-dev
-yum -y --nogpgcheck install tmux vim-enhanced
+yum -y --nogpgcheck install iftop htop python-pip python-dev openssl-devel
+yum -y --nogpgcheck install tmux vim-enhanced bzip2-devel
 
 if [ $? -ne 0 ]
 then
